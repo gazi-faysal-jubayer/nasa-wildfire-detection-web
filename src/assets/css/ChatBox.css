@@ -1,0 +1,134 @@
+
+
+.chat-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 350px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border-radius: 10px;
+}
+
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  background-color: #d7d6ff;
+  border-radius: 10px;
+}
+
+.chat-header span {
+  display: flex;
+	justify-content: center;
+	align-items: center;
+  margin-left: 10px;
+}
+
+.close-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  transition: 0.2s ease-in-out;
+  color: #a1a0ff;
+}
+
+.close-button:hover {
+  rotate: 45deg;
+}
+
+.chat-messages {
+  height: 300px !important;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.chat-message {
+  padding: 5px 0;
+}
+
+.chat-input-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.chat-input {
+  width: calc(100% - 70px);
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.send-button {
+  padding: 10px;
+  margin-left: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 50%;
+  background-color: #a1a0ff;
+  transition: 0.2s ease-in-out;
+}
+
+.send-button:hover {
+  background-color: #7c7aff;
+}
+
+.chat-messages {
+  height: 200px;
+  overflow-y: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-message {
+  align-self: flex-end;
+  background-color: #2196F3;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  word-wrap: break-word;
+  max-width: 70%;
+}
+
+.other-message {
+  align-self: flex-start;
+  background-color: #e0e0e0;
+  color: black;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  word-wrap: break-word;
+  max-width: 70%;
+}
+
+.message-enter {
+  opacity: 0;
+}
+
+.message-enter-active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.message {
+  animation: fadeIn 0.5s ease forwards;
+}

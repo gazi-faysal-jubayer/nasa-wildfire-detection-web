@@ -1,5 +1,29 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: auto !important;
+}
+
+.header {
+  padding: 10px;
+  background-color: firebrick;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.header h1 {
+  font-size: 25px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
 .map {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   position: relative;
 }
@@ -8,6 +32,11 @@
   font-size: 2rem;
   color: red;
 }
+
+.old-location {
+  color: black;
+}
+
 
 .loader {
   display: flex;
@@ -45,4 +74,8 @@
 
 .location-info li {
   padding: 5px 0;
+}
+
+.my-edit-navbar {
+  background-color: rgba(0, 0, 0, 0.6);
 }

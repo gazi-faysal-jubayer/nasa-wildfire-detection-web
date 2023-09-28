@@ -14,6 +14,8 @@ import About from './pages/About';
 import Solution from './pages/Solution';
 import Map from './pages/Map';
 import Loader from './pages/Loader';
+import Footer from './pages/Footer';
+
 
 function App() {
 
@@ -48,8 +50,8 @@ function App() {
         <About/>
         <Solution/>
       { !loading ? <Map eventData={eventData} /> : <Loader /> }
-
       </main>
+      <Footer/>
     </div>
   );
 }

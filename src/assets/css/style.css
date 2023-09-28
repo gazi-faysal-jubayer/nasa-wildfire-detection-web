@@ -154,6 +154,10 @@ h6 {
   white-space: nowrap;
 }
 
+.nav-menu a {
+  cursor: pointer;
+}
+
 .nav-menu a,
 .nav-menu a:focus {
   display: flex;
