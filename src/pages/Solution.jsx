@@ -1,5 +1,7 @@
 import React from "react";
-
+import wf6 from "../assets/img/wf6.jpg";
+import wf4 from "../assets/img/wf4.jpg";
+import wf5 from "../assets/img/wf5.jpg";
 
 const Solution = () => {
   return (
@@ -15,7 +17,7 @@ const Solution = () => {
 
           <div className="row">
             <div className="col-lg-4">
-              <img src={require("../assets/img/wf4.jpg")} className="img-fluid" alt="" />
+              <img src={wf4} className="img-fluid" alt="" />
             </div>
             <div className="col-lg-8 pt-4 pt-lg-0 content">
               <h3>What is Wildfire?</h3>
@@ -37,7 +39,7 @@ const Solution = () => {
         <div className="container" data-aos="fade-up">
           <div className="row">
             <div className="col-lg-4">
-              <img src={require("../assets/img/wf5.jpg")} className="img-fluid" alt="" />
+              <img src={wf5} className="img-fluid" alt="" />
             </div>
             <div className="col-lg-8 pt-4 pt-lg-0 content">
               <h3>What is the reason of Wildfire?</h3>
@@ -63,7 +65,7 @@ const Solution = () => {
 
           <div className="row">
             <div className="col-lg-4">
-              <img src={require("../assets/img/wf6.jpg")} className="img-fluid" alt="" />
+              <img src={wf6} className="img-fluid" alt="" />
             </div>
             <div className="col-lg-8 pt-4 pt-lg-0 content">
               <h3>What is Wildfire?</h3>

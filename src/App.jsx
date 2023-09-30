@@ -8,6 +8,8 @@ import './assets/vendor/glightbox/css/glightbox.min.css';
 import './assets/vendor/swiper/swiper-bundle.min.css';
 import './assets/css/style.css';
 import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Header from './pages/Header';
 import Hero from './pages/Hero';
 import About from './pages/About';
@@ -15,6 +17,9 @@ import Solution from './pages/Solution';
 import Map from './pages/Map';
 import Loader from './pages/Loader';
 import Footer from './pages/Footer';
+import Signup from './pages/Signup';
+import Login from './pages/Login';
+import Home from './pages/Home';
 
 
 function App() {
@@ -24,16 +29,23 @@ function App() {
 
   useEffect(() => {
     const fetchEvents = async () => {
-      setLoading(true)
-      const res = await fetch('https://eonet.gsfc.nasa.gov/api/v3/events')
-      const { events } = await res.json()
+      setLoading(true);
+      try {
+        const res = await fetch('https://eonet.gsfc.nasa.gov/api/v3/events');
+        if (!res.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const { events } = await res.json();
+        setEventData(events);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+        setLoading(false);
+      }
+    };
 
-      setEventData(events)
-      setLoading(false)
-    }
-
-    fetchEvents()
-  }, [])
+    fetchEvents();
+  }, []);
   
   useEffect(
     () => {
@@ -44,6 +56,13 @@ function App() {
 
   return (
     <div className="App">
+      {/* <Router>
+        <Routes>
+          <Route path="/" element={<Home/>}></Route>
+          <Route path="/signup" element={<Signup/>}></Route>
+          <Route path="/login" element={<Login/>}></Route>
+        </Routes>
+      </Router> */}
       <Header/>
       <Hero/>
       <main id="main">
