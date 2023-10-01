@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import ChatBox from './ChatBox';
+import { handleLogout } from './Logout'; // make sure this import path is correct
 import '../assets/css/ChatBox.css';
 import { Link } from "react-router-dom";
 
-
-const Header = () => {
+const HeaderUser = () => {
 
   const [isChatOpen, setIsChatOpen] = useState(false);
 
@@ -19,9 +19,7 @@ const Header = () => {
 
         <nav id="navbar" className="navbar nav-menu">
           <ul>
-          
-          <li><Link to="/login"><a className="nav-link scrollto active"><i className="bx bx-home"></i> <span>Log In</span></a></Link></li>
-          <li><Link to="/signup"><a className="nav-link scrollto active"><i className="bx bx-home"></i> <span>Sign Up</span></a></Link></li>
+            <li><Link to="/login"><a className="nav-link scrollto active" onClick={handleLogout}><i className="bx bx-home"></i> <span>Log Out</span></a></Link></li>
             <li><a href="#hero" className="nav-link scrollto active"><i className="bx bx-home"></i> <span>Home</span></a></li>
             <li><a href="#about" className="nav-link scrollto"><i className="bx bx-book-content"></i> <span>About
               Wildfire</span></a></li>
@@ -38,4 +36,4 @@ const Header = () => {
     </>
   )
 }
-export default Header
+export default HeaderUser

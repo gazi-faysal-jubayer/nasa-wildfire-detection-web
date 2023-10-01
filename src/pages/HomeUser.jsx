@@ -10,17 +10,16 @@ import '../assets/css/style.css';
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-
-import Header from './Header';
 import Hero from './Hero';
 import About from './About';
 import Solution from './Solution';
 import Map from './Map';
 import Loader from './Loader';
 import Footer from './Footer';
+import HeaderUser from "./HeaderUser";
 
 
-function Home() {
+function HomeUser() {
 
   const [eventData, setEventData] = useState([])
   const [loading, setLoading] = useState(false)
@@ -54,7 +53,7 @@ function Home() {
 
   return (
     <div className="App">
-      <Header/>
+      <HeaderUser/>
       <Hero/>
       <main id="main">
         <About/>
@@ -66,4 +65,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default HomeUser;

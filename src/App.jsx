@@ -9,23 +9,36 @@ import './assets/vendor/swiper/swiper-bundle.min.css';
 import './assets/css/style.css';
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { auth } from "./firebase";
 
-import Header from './pages/Header';
+
+
 import Hero from './pages/Hero';
 import About from './pages/About';
 import Solution from './pages/Solution';
 import Map from './pages/Map';
 import Loader from './pages/Loader';
 import Footer from './pages/Footer';
-import Signup from './pages/Signup';
-import Login from './pages/Login';
-import Home from './pages/Home';
+import Home from "./pages/Home";
+import Login from "./Login/Login";
+import Signup from "./Signup/Signup";
+import Header from './pages/Header';
+import HomeUser from './pages/HomeUser';
 
 
 function App() {
 
   const [eventData, setEventData] = useState([])
   const [loading, setLoading] = useState(false)
+  const [userName, setUserName] = useState("");
+
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        setUserName(user.displayName);
+      } else setUserName("");
+    });
+  }, []);
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -56,21 +69,16 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Router>
+      <Router>
         <Routes>
-          <Route path="/" element={<Home/>}></Route>
-          <Route path="/signup" element={<Signup/>}></Route>
-          <Route path="/login" element={<Login/>}></Route>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/home" element={<HomeUser name={userName} />} />
+          <Route path="/" element={<Home/>} />
+          
         </Routes>
-      </Router> */}
-      <Header/>
-      <Hero/>
-      <main id="main">
-        <About/>
-        <Solution/>
-      { !loading ? <Map eventData={eventData} /> : <Loader /> }
-      </main>
-      <Footer/>
+      </Router>
+
     </div>
   );
 }
