@@ -8,7 +8,7 @@ export const handleLogout = async () => {
     // Check if a user is authenticated
     if (auth.currentUser) {
       await signOut(auth);
-      navigate("/login"); // Redirect user to the login page after logout
+      navigate("/"); // Redirect user to the login page after logout
     } else {
       console.error("No user is authenticated.");
     }

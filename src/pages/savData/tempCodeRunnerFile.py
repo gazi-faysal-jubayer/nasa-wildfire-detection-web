@@ -1,0 +1,1 @@
+C:\\Users\\Faysal\\OneDrive\\Desktop\\learning\\React Learning\\nasa-wildfire-detection-web\\src\\pages\\savData\\

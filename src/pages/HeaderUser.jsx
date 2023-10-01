@@ -19,7 +19,7 @@ const HeaderUser = () => {
 
         <nav id="navbar" className="navbar nav-menu">
           <ul>
-            <li><Link to="/login"><a className="nav-link scrollto active" onClick={handleLogout}><i className="bx bx-home"></i> <span>Log Out</span></a></Link></li>
+            {/* <li><Link to="/"><a className="nav-link scrollto active" onClick={handleLogout}><i className="bx bx-home"></i> <span>Log Out</span></a></Link></li> */}
             <li><a href="#hero" className="nav-link scrollto active"><i className="bx bx-home"></i> <span>Home</span></a></li>
             <li><a href="#about" className="nav-link scrollto"><i className="bx bx-book-content"></i> <span>About
               Wildfire</span></a></li>

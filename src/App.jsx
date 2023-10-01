@@ -4,9 +4,10 @@ import './assets/vendor/bootstrap-icons/bootstrap-icons.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './assets/vendor/boxicons/css/boxicons.min.css';
-import './assets/vendor/glightbox/css/glightbox.min.css';
 import './assets/vendor/swiper/swiper-bundle.min.css';
 import './assets/css/style.css';
+
+
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { auth } from "./firebase";
