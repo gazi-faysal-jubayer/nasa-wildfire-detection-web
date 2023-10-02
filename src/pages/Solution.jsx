@@ -1,89 +1,55 @@
-import React from "react";
-import wf6 from "../assets/img/wf6.jpg";
-import wf4 from "../assets/img/wf4.jpg";
-import wf5 from "../assets/img/wf5.jpg";
+import React, { useState } from "react";
+import wf6 from "../assets/img/wf6.png";
+import wf4 from "../assets/img/wf4.png";
+import wf5 from "../assets/img/wf5.png";
 
 const Solution = () => {
+  const [solutions] = useState([
+    {
+      title: "Solution 1",
+      shortDesc: "Short description for solution 1",
+      detailDesc: "Detailed description for solution 1 along with some images, text, etc.",
+      img: wf6,
+    },
+    {
+      title: "Solution 2",
+      shortDesc: "Short description for solution 2",
+      detailDesc: "Detailed description for solution 2 with more details.",
+      img: wf4,
+    },
+    // ... you can add more solutions here.
+  ]);
+
+  const [selectedSolution, setSelectedSolution] = useState(solutions[0]);
+
   return (
-    <>
-      <section id="resume" className="about">
-        <div className="container" data-aos="fade-up">
-
-
-          <div className="section-title">
+    
+    <section id="resume" className="solution">
+      <div className="section-title">
             <h2>Our Solution</h2>
+      </div>
+    <div className="container" data-aos="fade-up" style={{ display: "flex", justifyContent: "space-between" }}>
+
+      {/* Left div for solution list */}
+      <div className="left-container" style={{ flex: 1, borderRight: "1px solid black", padding: "20px" }}>
+        {solutions.map((solution, index) => (
+          <div key={index} onClick={() => setSelectedSolution(solution)}>
+            <h3>{solution.title}</h3>
+            <p>{solution.shortDesc}</p>
+            <hr />
           </div>
+        ))}
+      </div>
 
-
-          <div className="row">
-            <div className="col-lg-4">
-              <img src={wf4} className="img-fluid" alt="" />
-            </div>
-            <div className="col-lg-8 pt-4 pt-lg-0 content">
-              <h3>What is Wildfire?</h3>
-              <p className="fst-italic">
-                A wildfire is an uncontrolled and often rapidly spreading fire that occurs in natural landscapes, such as
-                forests, grasslands, and shrublands. These fires are characterized by their ability to burn and spread
-                quickly, often driven by factors like dry conditions, wind, and the presence of flammable vegetation.
-                Wildfires can vary in size and intensity, ranging from small, localized blazes to massive infernos that
-                cover vast areas. They can be ignited by natural causes like lightning strikes or human activities, such
-                as campfires, discarded cigarettes, or arson. Wildfires have the potential to cause significant damage to
-                the environment, wildlife habitats, property, and can pose a threat to human lives if not properly managed
-                and controlled.
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-        <div className="container" data-aos="fade-up">
-          <div className="row">
-            <div className="col-lg-4">
-              <img src={wf5} className="img-fluid" alt="" />
-            </div>
-            <div className="col-lg-8 pt-4 pt-lg-0 content">
-              <h3>What is the reason of Wildfire?</h3>
-              <p className="fst-italic">
-
-                Wildfires primarily occur due to a combination of natural and human factors. Natural factors include
-                lightning strikes, volcanic eruptions, and spontaneous combustion of dry vegetation. However, human
-                activities play a significant role in igniting wildfires, such as campfires left unattended, discarded
-                cigarette butts, power lines sparking, and arson.
-              </p>
-              <p>
-                Once ignited, wildfires spread quickly, driven by factors like dry weather, strong winds, and the presence
-                of flammable vegetation. Extended periods of drought and climate change can exacerbate wildfire risk by
-                creating dry conditions that make it easier for fires to ignite and spread. Additionally, urban expansion
-                into wildland areas increases the likelihood of human-caused ignitions, making wildfire prevention and
-                management crucial for protecting both people and the environment.
-              </p>
-            </div>
-
-          </div>
-        </div>
-        <div className="container" data-aos="fade-up">
-
-          <div className="row">
-            <div className="col-lg-4">
-              <img src={wf6} className="img-fluid" alt="" />
-            </div>
-            <div className="col-lg-8 pt-4 pt-lg-0 content">
-              <h3>What is Wildfire?</h3>
-              <p className="fst-italic">
-                Wildfires can cause significant harm in several ways. Firstly, they pose a direct threat to human lives
-                and property, leading to injuries, fatalities, and the destruction of homes and infrastructure. Secondly,
-                wildfires harm the environment by destroying natural habitats, killing wildlife, and disrupting
-                ecosystems. The loss of vegetation and soil erosion can lead to long-term environmental damage, impacting
-                water quality and increasing the risk of mudslides and flooding. Additionally, the smoke and air pollution
-                generated by wildfires can have adverse health effects on people, particularly those with respiratory
-                issues, and can contribute to poor air quality over large regions. Overall, wildfires can have devastating
-                social, economic, and environmental consequences.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </section></>
-  )
+      {/* Right div for solution details */}
+      <div className="right-container" style={{ flex: 2, padding: "20px" }}>
+        <h2>{selectedSolution.title}</h2>
+        <p>{selectedSolution.detailDesc}</p>
+        <img src={selectedSolution.img} alt={selectedSolution.title} style={{ width: '100%', maxHeight: '300px', objectFit: 'cover' }} />
+      </div>
+    </div>
+    </section>
+  );
 }
-export default Solution
+
+export default Solution;

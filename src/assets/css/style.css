@@ -266,12 +266,12 @@ h6 {
 # Hero Section
 --------------------------------------------------------------*/
 @keyframes slide {
-  0% {background-image: url(../img/slider/banner.jpg);}
-  20% {background-image: url(../img/slider/affinity.jpeg);}
-  40% {background-image: url(../img/slider/cinelli.jpeg);}
-  60% {background-image: url(../img/slider/banner.jpg);}
-  80% {background-image: url(../img/slider/affinity.jpeg);}
-  100% {background-image: url(../img/slider/cinelli.jpeg);}
+  0% {background-image: url(../img/slider/6.png);}
+  20% {background-image: url(../img/slider/2.png);}
+  40% {background-image: url(../img/slider/3.png);}
+  60% {background-image: url(../img/slider/4.png);}
+  80% {background-image: url(../img/slider/5.png);}
+  100% {background-image: url(../img/slider/1.png);}
 }
 
 #hero {
@@ -327,7 +327,7 @@ animation: slide 25s infinite;
 #hero .social-links a {
   font-size: 24px;
   display: inline-block;
-  color: #45505b;
+  color: #0080ff;
   line-height: 1;
   margin-right: 20px;
   transition: 0.3s;
@@ -340,10 +340,12 @@ animation: slide 25s infinite;
 
 .wrapper{
   position: absolute;
-  top: calc(100% + 10px); /* This will place it 10px below #hero .social-links */
-  left: 50%;
-  transform: translateX(-50%);
+  top: 50%;  /* This will place the center of .wrapper at the center of its parent */
+  transform: translate(-50%, -50%); /* This will adjust for .wrapper's own dimensions to truly center it */
+  margin-top: 200px;  /* This will push it down by 10px from the vertical center */
+  padding-left: 250px;
 }
+
 
 .link_wrapper{
   position: relative;
@@ -366,28 +368,6 @@ animation: slide 25s infinite;
   transition: all .35s;
 }
 
-.icon{
-  width: 50px;
-  height: 50px;
-  border: 3px solid transparent;
-  position: absolute;
-  transform: rotate(45deg);
-  right: 0;
-  top: 0;
-  z-index: -1;
-  transition: all .35s;
-}
-
-.icon svg{
-  width: 30px;
-  position: absolute;
-  top: calc(50% - 15px);
-  left: calc(50% - 15px);
-  transform: rotate(-45deg);
-  fill: #2ecc71;
-  transition: all .35s;
-}
-
 .wrapper a:hover{
   width: 200px;
   border: 3px solid #2ecc71;
@@ -395,10 +375,7 @@ animation: slide 25s infinite;
   color: #2ecc71;
 }
 
-.wrapper a:hover + .icon{
-  border: 3px solid #2ecc71;
-  right: -25%;
-}
+
 
 @media (max-width: 992px) {
   #hero {
@@ -477,7 +454,24 @@ section {
   color: #728394;
 }
 .about .container{
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.solution .container{
+  margin-bottom: 30px;
+}
+
+.solution .container .left-container h3 {
+  transition: 0.2s ease;
+  padding: 5px;
+  width: 40%;
+}
+
+.solution .container .left-container h3:hover {
+  background-color: #0080ff;
+  border-radius: 5px;
+  padding: 10px;
+  
 }
 
 .about .content ul {

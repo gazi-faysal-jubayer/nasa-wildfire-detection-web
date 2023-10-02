@@ -1,7 +1,7 @@
 import React from "react";
-import wf1  from "../assets/img/wf1.jpg";
-import wf2 from "../assets/img/wf2.jpg";
-import wf3 from "../assets/img/wf3.jpg";
+import wf1  from "../assets/img/wf1.png";
+import wf2 from "../assets/img/wf2.png";
+import wf3 from "../assets/img/wf3.png";
 
 
 const About = () => {

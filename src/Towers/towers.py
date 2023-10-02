@@ -1,32 +1,22 @@
 from flask import Flask, jsonify
-import csv
+import random
 
-# Initialize Flask app
 app = Flask(__name__)
 
-# Load data from the CSV file into a list of dictionaries
-positions_data = []
-
-with open(r'C:\\Users\\Faysal\\OneDrive\\Desktop\\learning\\React Learning\\nasa-wildfire-detection-web\\src\\Towers\\california_positions.csv', 'r') as csvfile:
-    reader = csv.DictReader(csvfile)
-    i = 0
-    for row in reader:
-        i = i+1
-        positions_data.append({
-            "id": i,
-            "original_latitude": float(row["Original Latitude"]),
-            "original_longitude": float(row["Original Longitude"]),
-            "shifted_latitude": float(row["Shifted Latitude"]),
-            "shifted_longitude": float(row["Shifted Longitude"])
-        })
-
-# Flask endpoint to return the positions in JSON format
 @app.route('/', methods=['GET'])
-def get_positions():
-    return jsonify(positions_data)
+def get_random_forest_coordinates():
+    latitude_longitude_pairs = []
+    
+    # Rough bounding box for Sierra National Forest
+    min_lat, max_lat = 36.9, 37.7
+    min_lon, max_lon = -119.6, -118.8
 
-# Run the app (for demonstration purposes here, we won't actually execute this line)
+    for _ in range(50):
+        lat = random.uniform(min_lat, max_lat)
+        lon = random.uniform(min_lon, max_lon)
+        latitude_longitude_pairs.append({"latitude": lat, "longitude": lon})
+
+    return jsonify(latitude_longitude_pairs)
+
 if __name__ == '__main__':
     app.run(debug=True)
-
-
