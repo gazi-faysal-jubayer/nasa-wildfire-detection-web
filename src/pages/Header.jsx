@@ -29,7 +29,8 @@ const Header = () => {
             <li><a href="#portfolio" className="nav-link scrollto"><i className="bx bx-map"></i> <span>Map</span></a></li>
             <li><a className="nav-link scrollto" onClick={handleChatButtonClick}><i className="bx bx-message"></i><span>Message</span></a></li>
             {isChatOpen && <ChatBox onClose={() => setIsChatOpen(false)} />}
-            <li><a href="#contact" className="nav-link scrollto"><i className="bx bx-envelope"></i> <span>Contact</span></a></li>
+            {/* <li><a href="#contact" className="nav-link scrollto"><i className="bx bx-envelope"></i> <span>Contact</span></a></li> */}
+            <li><a href="#webcam" className="nav-link scrollto"><i class='bx bxs-camera-movie'></i><span>Footage</span></a></li>
           </ul>
         </nav>
 

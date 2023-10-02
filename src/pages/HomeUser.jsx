@@ -9,13 +9,13 @@ import '../assets/css/style.css';
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Hero from './Hero';
+import Header from './Header';
 import About from './About';
 import Solution from './Solution';
 import Map from './Map';
 import Loader from './Loader';
 import Footer from './Footer';
-import HeaderUser from "./HeaderUser";
+import HeroUser from "./HeroUser";
 
 
 function HomeUser() {
@@ -52,12 +52,13 @@ function HomeUser() {
 
   return (
     <div className="App">
-      <HeaderUser/>
-      <Hero/>
+      <Header/>
+      <HeroUser/>
       <main id="main">
         <About/>
         <Solution/>
       { !loading ? <Map eventData={eventData} /> : <Loader /> }
+      <Webcam />
       </main>
       <Footer/>
     </div>

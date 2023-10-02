@@ -17,6 +17,7 @@ import Solution from './Solution';
 import Map from './Map';
 import Loader from './Loader';
 import Footer from './Footer';
+import Webcam from './Webcam';
 
 
 function Home() {
@@ -59,6 +60,7 @@ function Home() {
         <About/>
         <Solution/>
       { !loading ? <Map eventData={eventData} /> : <Loader /> }
+      <Webcam />
       </main>
       <Footer/>
     </div>
