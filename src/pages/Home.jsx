@@ -18,6 +18,7 @@ import Map from './Map';
 import Loader from './Loader';
 import Footer from './Footer';
 import Webcam from './Webcam';
+import Towermap from '../Towers/Towermap';
 
 
 function Home() {
@@ -45,6 +46,10 @@ function Home() {
     fetchEvents();
   }, []);
   
+// tower
+  const [towerData, setTowerData] = useState([]);
+
+
   useEffect(
     () => {
       AOS.init()
@@ -60,6 +65,8 @@ function Home() {
         <About/>
         <Solution/>
       { !loading ? <Map eventData={eventData} /> : <Loader /> }
+      { !loading ? <Towermap eventData={towerData}/> : <Loader /> }
+
       <Webcam />
       </main>
       <Footer/>
