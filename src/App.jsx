@@ -25,6 +25,7 @@ import Login from "./Login/Login";
 import Signup from "./Signup/Signup";
 import Header from './pages/Header';
 import HomeUser from './pages/HomeUser';
+import UnifiedMap from './pages/UnifiedMap';
 
 
 function App() {

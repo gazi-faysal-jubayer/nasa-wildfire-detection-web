@@ -19,6 +19,8 @@ import Loader from './Loader';
 import Footer from './Footer';
 import Webcam from './Webcam';
 import Towermap from '../Towers/Towermap';
+import UnifiedMap from './UnifiedMap';
+
 
 
 function Home() {
@@ -64,8 +66,7 @@ function Home() {
       <main id="main">
         <About/>
         <Solution/>
-      { !loading ? <Map eventData={eventData} /> : <Loader /> }
-      { !loading ? <Towermap eventData={towerData}/> : <Loader /> }
+      { !loading ? <UnifiedMap /> : <Loader /> }
 
       <Webcam />
       </main>

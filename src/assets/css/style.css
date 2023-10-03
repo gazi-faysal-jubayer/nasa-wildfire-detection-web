@@ -457,23 +457,6 @@ section {
   margin-bottom: 30px;
 }
 
-.solution .container{
-  margin-bottom: 30px;
-}
-
-.solution .container .left-container h3 {
-  transition: 0.2s ease;
-  padding: 5px;
-  width: 40%;
-}
-
-.solution .container .left-container h3:hover {
-  background-color: #0080ff;
-  border-radius: 5px;
-  padding: 10px;
-  
-}
-
 .about .content ul {
   list-style: none;
   padding: 0;
@@ -1273,4 +1256,162 @@ section {
 
 #footer .credits {
   font-size: 13px;
+}
+
+
+
+
+
+
+
+
+/* Container Styles */
+.solution {
+  font-family: 'Arial', sans-serif; /* Choose any desired font-family */
+  padding: 20px 0;
+}
+
+.solution .container {
+  position: relative;
+  max-width: 1200px; /* Adjust as per design needs */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Section Title */
+.solution .section-title h2 {
+  text-align: center;
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.solution .container .left-container,
+.solution .container .right-container {
+  height: 100%;
+}
+
+
+
+/* Left Container Styles */
+.solution .container .left-container {
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Scrollable if the list gets too long */
+  height: 500px; /* Adjust as per design needs */
+  margin-right: 20px;
+}
+
+.solution .container .left-container div {
+  padding: 10px;
+  transition: 0.2s ease;
+  cursor: pointer;
+
+}
+
+.solution .container .left-container div:hover {
+  background-color: #f2f2f2; /* Light gray background on hover */
+}
+
+.solution .container .left-container h3 {
+  font-size: 1.2em;
+  margin: 0;
+  padding: 10px 15px; /* added padding for more spacing */
+  width: 40%;
+  border-radius: 20px;
+  transition: background-color 0.3s, font-weight 0.3s, color 0.3s; /* smooth transition for background-color, font-weight, and color changes */
+  background-color: transparent; /* default to transparent background */
+  color: #333; /* default text color to a dark gray */
+}
+
+.solution .container .left-container div:hover h3 {
+  background-image: linear-gradient(135deg, #ec7404, #ff0400); /* Gradient background for a cooler look */
+  color: #ffffff; /* text color changed to white for better contrast against the gradient */
+  font-weight: bold;
+}
+
+
+.solution .container .left-container p {
+  color: #777;
+  margin-top: 5px;
+}
+
+/* Right Container Styles */
+.solution .container .right-container {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+.solution .container .right-container h2 {
+  font-size: 2em;
+  border-bottom: 2px solid #0080ff;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.solution .container .right-container p {
+  font-size: 1.1em;
+  line-height: 1.5;
+  color: #555;
+}
+
+.solution .container .right-container img {
+  margin-top: 20px;
+  border-radius: 5px; /* Optionally give the image rounded corners */
+}
+
+
+
+
+
+
+.unified-portfolio-section {
+  padding: 50px 0;
+}
+
+.unified-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.unified-section-title h2 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.unified-map {
+  border: 2px solid #c4c4c4;
+  position: relative;
+}
+
+.dropdown-container {
+  position: absolute;
+  top: 20px;
+  left: 20px; /* Adjusted from "right: 20px" to "left: 20px" */
+  z-index: 10; /* To ensure it appears above the map */
+}
+
+.dropdown-container select {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.8); /* Partial transparency */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #555;
+  cursor: pointer;
+  appearance: none; /* Removes default styling on some browsers */
+  outline: none;
+}
+
+.dropdown-container select:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.dropdown-container select:focus {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }

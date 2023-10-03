@@ -45,7 +45,7 @@ const Solution = () => {
       <div className="right-container" style={{ flex: 2, padding: "20px" }}>
         <h2>{selectedSolution.title}</h2>
         <p>{selectedSolution.detailDesc}</p>
-        <img src={selectedSolution.img} alt={selectedSolution.title} style={{ width: '100%', maxHeight: '300px', objectFit: 'cover' }} />
+        <img src={selectedSolution.img} alt={selectedSolution.title} style={{ width: '100%', objectFit: 'contain' }} />
       </div>
     </div>
     </section>

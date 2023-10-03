@@ -5,8 +5,6 @@ import LocationMarker from './LocationMarker'
 import OldLocationMarker from './OldLocationMarker'
 import LocationInfoBox from './LocationInfoBox'
 
-// define constants
-const NATURAL_EVENT_WILDFIRE = 8;
 
 const Map = ({ eventData, center, zoom }) => {
     const [locationInfo, setLocationInfo] = useState(null)
