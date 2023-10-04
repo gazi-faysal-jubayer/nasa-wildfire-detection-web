@@ -78,8 +78,11 @@ const UnifiedMap = () => {
 
     // Render the "Near Me" button
     const renderNearMeButton = () => (
-        <button onClick={handleNearMeClick}>Near Me</button>
-    );
+        <button className="button-near-me" onClick={handleNearMeClick}>
+          Near Me
+        </button>
+      );
+      
 
     useEffect(() => {
         const fetchEvents = async () => {

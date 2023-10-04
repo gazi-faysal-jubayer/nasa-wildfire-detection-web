@@ -1269,6 +1269,7 @@ section {
 .solution {
   font-family: 'Arial', sans-serif; /* Choose any desired font-family */
   padding: 20px 0;
+  margin-bottom: 50px;
 }
 
 .solution .container {
@@ -1299,7 +1300,7 @@ section {
 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow-y: auto; /* Scrollable if the list gets too long */
-  height: 500px; /* Adjust as per design needs */
+  height: 550px; /* Adjust as per design needs */
   margin-right: 20px;
 }
 
@@ -1318,7 +1319,7 @@ section {
   font-size: 1.2em;
   margin: 0;
   padding: 10px 15px; /* added padding for more spacing */
-  width: 40%;
+  width: 90%;
   border-radius: 20px;
   transition: background-color 0.3s, font-weight 0.3s, color 0.3s; /* smooth transition for background-color, font-weight, and color changes */
   background-color: transparent; /* default to transparent background */
@@ -1340,6 +1341,8 @@ section {
 /* Right Container Styles */
 .solution .container .right-container {
   background-color: #fff;
+  overflow-y: auto;
+  height: 550px; /* Adjust as per design needs */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   padding: 20px;
 }
@@ -1358,8 +1361,8 @@ section {
 }
 
 .solution .container .right-container img {
-  margin-top: 20px;
-  border-radius: 5px; /* Optionally give the image rounded corners */
+  margin-bottom: 50px;
+  border-radius: 10px; /* Optionally give the image rounded corners */
 }
 
 
@@ -1414,4 +1417,24 @@ section {
 
 .dropdown-container select:focus {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+.button-near-me {
+  background-color: #007bff; /* Blue background color */
+  color: #fff; /* White text color */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.8;
+  margin-left: 10px;
+}
+
+/* Add hover effect to the button */
+.button-near-me:hover {
+  background-color: #0056b3; /* Darker blue on hover */
 }
