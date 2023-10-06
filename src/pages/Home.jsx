@@ -20,6 +20,7 @@ import Footer from './Footer';
 import Webcam from './Webcam';
 import Towermap from '../Towers/Towermap';
 import UnifiedMap from './UnifiedMap';
+import Resources from './Resources';
 
 
 
@@ -68,7 +69,8 @@ function Home() {
         <Solution/>
       { !loading ? <UnifiedMap /> : <Loader /> }
 
-      <Webcam />
+      {/* <Webcam /> */}
+      <Resources/>
       </main>
       <Footer/>
     </div>
